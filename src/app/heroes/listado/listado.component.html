@@ -1,0 +1,17 @@
+<p>listado de heroes!</p>
+
+
+
+<h3 *ngIf=" elementoBorrado.length !== 0 " >Heroe borrado:{{elementoBorrado}}</h3>
+<h4 *ngIf="elementoBorrado.length ===0 "> El arreglo esta vacio</h4>
+<ul>
+
+  <li *ngFor="let heroe of heroes; let i = index">
+     {{ i+1 }} - {{heroe}}
+  </li>
+
+
+
+
+  <button (click)="borrarHeroe()">Borrar Heroe</button>
+</ul>
